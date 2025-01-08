@@ -185,7 +185,6 @@ fun loginMainIsEnable(viewModel: LoginMainViewModel): Boolean {
 fun LoginScreenPreview() {
     BebechoTheme {
         val navController = rememberNavController()
-        Log.d("test","testpostback2222")
         LoginMainScreen(navigationAction = LoginNavigationActions(navController))
     }
 }

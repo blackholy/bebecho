@@ -68,7 +68,7 @@ import kr.co.eoasis.bebecho.ui.theme.Gray3
 import androidx.compose.material3.Scaffold
 
 import androidx.navigation.compose.currentBackStackEntryAsState
-import kr.co.eoasis.bebecho.ui.navigation.MainDestinations
+
 
 @Composable
 fun MainScreen(
