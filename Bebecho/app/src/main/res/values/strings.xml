@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Bebecho</string>
+    <string name="login_main_title_login">Login</string>
+    <string name="login_main_placeholder_enter_id">Enter ID</string>
+    <string name="login_main_placeholder_enter_password">Enter Password</string>
+    <string name="login_main_button_login">Login</string>
+    <string name="login_main_text_button_sign_up">회원가입</string>
+    <string name="login_main_text_button_find_password">비밀번호 찾기</string>
+    <string name="login_sign_up_title_sign_up">회원가입</string>
+    <string name="login_sign_up_label_name">이름</string>
+    <string name="login_sign_up_placeholder_name">이름을 입력해주세요.</string>
+    <string name="login_sing_up_label_id">아이디</string>
+    <string name="login_sign_up_placeholder_id">아이디를 입력해주세요.</string>
+    <string name="login_sign_up_label_password">패스워드</string>
+    <string name="login_sign_up_placeholder_password">패스워드를 입력해주세요.</string>
+    <string name="login_sign_up_label_birth">생년월일</string>
+    <string name="login_sign_up_placeholder_birth">생년월일을 입력해주세요.</string>
+    <string name="login_sign_up_label_email">이메일</string>
+    <string name="login_sign_up_placeholder_email">이메일을 입력해주세요.</string>
+    <string name="login_sign_up_button_register">가입하기</string>
+    <string name="login_survey_title_survey">설문</string>
+    <string name="login_survey_label_single_baby">1. 단태아(1명)입니까?</string>
+    <string name="login_survey_label_due_date">2. 출산 예정일은 언제인가요?</string>
+</resources>
