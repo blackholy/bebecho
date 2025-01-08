@@ -1,5 +1,6 @@
 package kr.co.eoasis.bebecho
 
+import android.util.Log
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -31,17 +32,27 @@ fun BebechoNavGraph(
     navController: NavHostController = rememberNavController(),
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
     drawerState: DrawerState = rememberDrawerState(initialValue = DrawerValue.Closed),
-    startDestination: String = BebechoDestinations.LOGIN_ROUTE,
+
+    isUserLoggedIn: Boolean = false, // 로그인 상태를 확인하는 변수
+    //startDestination: String = BebechoDestinations.LOGIN_ROUTE,
     navActions: BebechoNavigationActions = remember(navController) {
         BebechoNavigationActions(navController)
     }
 ) {
+
+    Log.d("test",isUserLoggedIn.toString())
+    val startDestination = if (isUserLoggedIn) {
+        BebechoDestinations.MAIN_ROUTE
+    } else {
+        BebechoDestinations.LOGIN_ROUTE
+    }
     val currentNavBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = currentNavBackStackEntry?.destination?.route ?: startDestination
 
     NavHost(
         navController = navController,
         startDestination = startDestination,
+
         modifier = modifier.padding(top = 44.dp)
     ) {
         composable(

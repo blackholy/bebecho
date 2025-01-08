@@ -113,8 +113,11 @@ fun LoginMainScreen(
                         enabled = loginMainIsEnable(viewModel),
                         fontSize = 16.sp
                     ) {
-                        viewModel.saveUserData()
-                        navigationAction.navigateToMain()
+                        if (viewModel.LoginChek()) {
+                            Log.d("test", "Navigating to Main")
+                            navigationAction.navigateToMain() // Composable에서 NavController를 활용해 네비게이션
+                        }
+
                     }
                 }
                 Row(

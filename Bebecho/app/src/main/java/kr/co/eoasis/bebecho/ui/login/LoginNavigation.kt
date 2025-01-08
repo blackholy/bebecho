@@ -44,12 +44,23 @@ class LoginNavigationActions(private val navController: NavHostController) {
     fun navigateToSearch() {
         navController.navigate(SEARCH_ROUTE)
     }
+    /*
     fun navigateToMain() {
         navController.navigate(BebechoDestinations.MAIN_ROUTE) {
             // 로그인 스택을 완전히 제거
+
             popUpTo(BebechoDestinations.MAIN_ROUTE) {
                 inclusive = true  // LOGIN_ROUTE도 스택에서 제거
             }
+        }
+    }
+
+     */
+
+    fun navigateToMain() {
+        navController.navigate(BebechoDestinations.MAIN_ROUTE) {
+            popUpTo(navController.graph.startDestinationId) { inclusive = true }
+            launchSingleTop = true
         }
     }
 
